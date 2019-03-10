@@ -29,6 +29,7 @@
 		A900112B223568AC00AA15D1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900112A223568AC00AA15D1 /* Task.swift */; };
 		A900112D22356ADB00AA15D1 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900112C22356ADB00AA15D1 /* TaskTests.swift */; };
 		A900112F2235789400AA15D1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = A900112E2235789400AA15D1 /* .travis.yml */; };
+		A9001131223581A800AA15D1 /* concurrency-kit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A9001130223581A800AA15D1 /* concurrency-kit.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		A900112A223568AC00AA15D1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		A900112C22356ADB00AA15D1 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
 		A900112E2235789400AA15D1 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		A9001130223581A800AA15D1 /* concurrency-kit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "concurrency-kit.podspec"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		A90010E02234ED5000AA15D1 = {
 			isa = PBXGroup;
 			children = (
+				A9001130223581A800AA15D1 /* concurrency-kit.podspec */,
 				A900112E2235789400AA15D1 /* .travis.yml */,
 				A90011042234ED6C00AA15D1 /* .gitignore */,
 				A90010EC2234ED5000AA15D1 /* concurrency-kit */,
@@ -269,6 +272,7 @@
 			files = (
 				A900112F2235789400AA15D1 /* .travis.yml in Resources */,
 				A90011052234ED6C00AA15D1 /* .gitignore in Resources */,
+				A9001131223581A800AA15D1 /* concurrency-kit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
