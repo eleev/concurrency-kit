@@ -8,9 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		A90010F42234ED5000AA15D1 /* concurrency_kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90010EA2234ED5000AA15D1 /* concurrency_kit.framework */; };
-		A90010F92234ED5000AA15D1 /* concurrency_kitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90010F82234ED5000AA15D1 /* concurrency_kitTests.swift */; };
+		A90010F92234ED5000AA15D1 /* AtomicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90010F82234ED5000AA15D1 /* AtomicTests.swift */; };
 		A90010FB2234ED5000AA15D1 /* concurrency_kit.h in Headers */ = {isa = PBXBuildFile; fileRef = A90010ED2234ED5000AA15D1 /* concurrency_kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A90011052234ED6C00AA15D1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A90011042234ED6C00AA15D1 /* .gitignore */; };
+		A900110A2234EDF700AA15D1 /* DispatchQueue+Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90011092234EDF700AA15D1 /* DispatchQueue+Once.swift */; };
+		A900110C2234EE1F00AA15D1 /* DispatchQueue+AsyncAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900110B2234EE1F00AA15D1 /* DispatchQueue+AsyncAfter.swift */; };
+		A900110E2234EE9300AA15D1 /* LockType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900110D2234EE9300AA15D1 /* LockType.swift */; };
+		A90011102234EEB300AA15D1 /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900110F2234EEB300AA15D1 /* Mutex.swift */; };
+		A90011122234EED100AA15D1 /* ReadWriteLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90011112234EED100AA15D1 /* ReadWriteLock.swift */; };
+		A90011142234EF1200AA15D1 /* UnfairLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90011132234EF1200AA15D1 /* UnfairLock.swift */; };
+		A90011162234EF3F00AA15D1 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90011152234EF3F00AA15D1 /* Atomic.swift */; };
+		A900111822351B7A00AA15D1 /* AtomicInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900111722351B7A00AA15D1 /* AtomicInt.swift */; };
+		A900111A22351BAD00AA15D1 /* AtomicBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900111922351BAD00AA15D1 /* AtomicBool.swift */; };
+		A900111C22351C6C00AA15D1 /* AtomicIntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900111B22351C6C00AA15D1 /* AtomicIntTests.swift */; };
+		A900111E22351CB900AA15D1 /* AtomicBoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900111D22351CB900AA15D1 /* AtomicBoolTests.swift */; };
+		A900112022351D9900AA15D1 /* DispatchQueue+AsyncAfterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900111F22351D9900AA15D1 /* DispatchQueue+AsyncAfterTests.swift */; };
+		A90011242235237A00AA15D1 /* DispatchQueue+OnceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90011232235237A00AA15D1 /* DispatchQueue+OnceTests.swift */; };
+		A90011262235266000AA15D1 /* UnfairLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90011252235266000AA15D1 /* UnfairLockTests.swift */; };
+		A90011282235348E00AA15D1 /* ReadWriteLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90011272235348E00AA15D1 /* ReadWriteLockTests.swift */; };
+		A900112B223568AC00AA15D1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900112A223568AC00AA15D1 /* Task.swift */; };
+		A900112D22356ADB00AA15D1 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A900112C22356ADB00AA15D1 /* TaskTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +45,26 @@
 		A90010ED2234ED5000AA15D1 /* concurrency_kit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = concurrency_kit.h; sourceTree = "<group>"; };
 		A90010EE2234ED5000AA15D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A90010F32234ED5000AA15D1 /* concurrency-kitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "concurrency-kitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A90010F82234ED5000AA15D1 /* concurrency_kitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concurrency_kitTests.swift; sourceTree = "<group>"; };
+		A90010F82234ED5000AA15D1 /* AtomicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicTests.swift; sourceTree = "<group>"; };
 		A90010FA2234ED5000AA15D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A90011042234ED6C00AA15D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A90011092234EDF700AA15D1 /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Once.swift"; sourceTree = "<group>"; };
+		A900110B2234EE1F00AA15D1 /* DispatchQueue+AsyncAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+AsyncAfter.swift"; sourceTree = "<group>"; };
+		A900110D2234EE9300AA15D1 /* LockType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockType.swift; sourceTree = "<group>"; };
+		A900110F2234EEB300AA15D1 /* Mutex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
+		A90011112234EED100AA15D1 /* ReadWriteLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWriteLock.swift; sourceTree = "<group>"; };
+		A90011132234EF1200AA15D1 /* UnfairLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfairLock.swift; sourceTree = "<group>"; };
+		A90011152234EF3F00AA15D1 /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		A900111722351B7A00AA15D1 /* AtomicInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicInt.swift; sourceTree = "<group>"; };
+		A900111922351BAD00AA15D1 /* AtomicBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicBool.swift; sourceTree = "<group>"; };
+		A900111B22351C6C00AA15D1 /* AtomicIntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicIntTests.swift; sourceTree = "<group>"; };
+		A900111D22351CB900AA15D1 /* AtomicBoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicBoolTests.swift; sourceTree = "<group>"; };
+		A900111F22351D9900AA15D1 /* DispatchQueue+AsyncAfterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+AsyncAfterTests.swift"; sourceTree = "<group>"; };
+		A90011232235237A00AA15D1 /* DispatchQueue+OnceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+OnceTests.swift"; sourceTree = "<group>"; };
+		A90011252235266000AA15D1 /* UnfairLockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfairLockTests.swift; sourceTree = "<group>"; };
+		A90011272235348E00AA15D1 /* ReadWriteLockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWriteLockTests.swift; sourceTree = "<group>"; };
+		A900112A223568AC00AA15D1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		A900112C22356ADB00AA15D1 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +108,12 @@
 		A90010EC2234ED5000AA15D1 /* concurrency-kit */ = {
 			isa = PBXGroup;
 			children = (
-				A90010ED2234ED5000AA15D1 /* concurrency_kit.h */,
 				A90010EE2234ED5000AA15D1 /* Info.plist */,
+				A90010ED2234ED5000AA15D1 /* concurrency_kit.h */,
+				A90011082234EDDA00AA15D1 /* Dispatch */,
+				A90011072234EDD400AA15D1 /* Locks */,
+				A90011062234EDC700AA15D1 /* Atomics */,
+				A90011292235687F00AA15D1 /* Task */,
 			);
 			path = "concurrency-kit";
 			sourceTree = "<group>";
@@ -83,10 +121,55 @@
 		A90010F72234ED5000AA15D1 /* concurrency-kitTests */ = {
 			isa = PBXGroup;
 			children = (
-				A90010F82234ED5000AA15D1 /* concurrency_kitTests.swift */,
 				A90010FA2234ED5000AA15D1 /* Info.plist */,
+				A90010F82234ED5000AA15D1 /* AtomicTests.swift */,
+				A900111B22351C6C00AA15D1 /* AtomicIntTests.swift */,
+				A900111D22351CB900AA15D1 /* AtomicBoolTests.swift */,
+				A900111F22351D9900AA15D1 /* DispatchQueue+AsyncAfterTests.swift */,
+				A90011232235237A00AA15D1 /* DispatchQueue+OnceTests.swift */,
+				A90011252235266000AA15D1 /* UnfairLockTests.swift */,
+				A90011272235348E00AA15D1 /* ReadWriteLockTests.swift */,
+				A900112C22356ADB00AA15D1 /* TaskTests.swift */,
 			);
 			path = "concurrency-kitTests";
+			sourceTree = "<group>";
+		};
+		A90011062234EDC700AA15D1 /* Atomics */ = {
+			isa = PBXGroup;
+			children = (
+				A90011152234EF3F00AA15D1 /* Atomic.swift */,
+				A900111722351B7A00AA15D1 /* AtomicInt.swift */,
+				A900111922351BAD00AA15D1 /* AtomicBool.swift */,
+			);
+			path = Atomics;
+			sourceTree = "<group>";
+		};
+		A90011072234EDD400AA15D1 /* Locks */ = {
+			isa = PBXGroup;
+			children = (
+				A900110D2234EE9300AA15D1 /* LockType.swift */,
+				A900110F2234EEB300AA15D1 /* Mutex.swift */,
+				A90011112234EED100AA15D1 /* ReadWriteLock.swift */,
+				A90011132234EF1200AA15D1 /* UnfairLock.swift */,
+			);
+			path = Locks;
+			sourceTree = "<group>";
+		};
+		A90011082234EDDA00AA15D1 /* Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				A90011092234EDF700AA15D1 /* DispatchQueue+Once.swift */,
+				A900110B2234EE1F00AA15D1 /* DispatchQueue+AsyncAfter.swift */,
+			);
+			path = Dispatch;
+			sourceTree = "<group>";
+		};
+		A90011292235687F00AA15D1 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				A900112A223568AC00AA15D1 /* Task.swift */,
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +234,7 @@
 				TargetAttributes = {
 					A90010E92234ED5000AA15D1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					A90010F22234ED5000AA15D1 = {
 						CreatedOnToolsVersion = 10.1;
@@ -198,6 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A900111A22351BAD00AA15D1 /* AtomicBool.swift in Sources */,
+				A900110E2234EE9300AA15D1 /* LockType.swift in Sources */,
+				A900112B223568AC00AA15D1 /* Task.swift in Sources */,
+				A90011102234EEB300AA15D1 /* Mutex.swift in Sources */,
+				A900111822351B7A00AA15D1 /* AtomicInt.swift in Sources */,
+				A900110A2234EDF700AA15D1 /* DispatchQueue+Once.swift in Sources */,
+				A90011142234EF1200AA15D1 /* UnfairLock.swift in Sources */,
+				A900110C2234EE1F00AA15D1 /* DispatchQueue+AsyncAfter.swift in Sources */,
+				A90011162234EF3F00AA15D1 /* Atomic.swift in Sources */,
+				A90011122234EED100AA15D1 /* ReadWriteLock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A90010F92234ED5000AA15D1 /* concurrency_kitTests.swift in Sources */,
+				A900112D22356ADB00AA15D1 /* TaskTests.swift in Sources */,
+				A90011262235266000AA15D1 /* UnfairLockTests.swift in Sources */,
+				A90011282235348E00AA15D1 /* ReadWriteLockTests.swift in Sources */,
+				A900111C22351C6C00AA15D1 /* AtomicIntTests.swift in Sources */,
+				A900112022351D9900AA15D1 /* DispatchQueue+AsyncAfterTests.swift in Sources */,
+				A900111E22351CB900AA15D1 /* AtomicBoolTests.swift in Sources */,
+				A90011242235237A00AA15D1 /* DispatchQueue+OnceTests.swift in Sources */,
+				A90010F92234ED5000AA15D1 /* AtomicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +446,7 @@
 		A90010FF2234ED5000AA15D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -361,6 +463,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "eleev.astemir.concurrency-kit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -369,6 +472,7 @@
 		A90011002234ED5000AA15D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -393,6 +497,7 @@
 		A90011022234ED5000AA15D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "concurrency-kitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -410,6 +515,7 @@
 		A90011032234ED5000AA15D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "concurrency-kitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
