@@ -4,7 +4,7 @@
 [![Language](https://img.shields.io/badge/language-Swift-orange.svg)]()
 [![CocoaPod](https://img.shields.io/badge/pod-1.0.0-lightblue.svg)]()
 [![Build Status](https://travis-ci.org/jVirus/concurrency-kit.svg?branch=master)](https://travis-ci.org/jVirus/concurrency-kit)
-[![Coverage](https://codecov.io/gh/jVirus/extensions-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/jVirus/extensions-kit)
+[![Coverage](https://codecov.io/gh/jVirus/concurrency-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/jVirus/concurrency-kit)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
 **Last Update: 10/March/2019.**
