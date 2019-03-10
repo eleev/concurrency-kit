@@ -1,5 +1,5 @@
 //
-//  concurrency_kitTests.swift
+//  AtomicBoolTests.swift
 //  concurrency-kitTests
 //
 //  Created by Astemir Eleev on 10/03/2019.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import concurrency_kit
 
-class concurrency_kitTests: XCTestCase {
+class AtomicBoolTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,11 +19,19 @@ class concurrency_kitTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSet() {
+        let atomic = AtomicBool(true)
+        atomic.set(false)
+        XCTAssertEqual(atomic.value, false)
     }
-
+    
+    func testGet() {
+        let atomic = AtomicBool(false)
+        atomic.set(true)
+        let value = atomic.get()
+        XCTAssertEqual(value, true)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
