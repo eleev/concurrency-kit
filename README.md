@@ -7,7 +7,7 @@
 [![Coverage](https://codecov.io/gh/jVirus/concurrency-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/jVirus/concurrency-kit)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-**Last Update: 10/March/2019.**
+**Last Update: 13/March/2019.**
 
 ![](logo-concurrency_kit.png)
 
@@ -27,23 +27,23 @@ pod 'concurrency-kit', '~> 1.0.0'
 You can always use `copy-paste` the sources method 😄. Or you can compile the framework and include it with your project.
 
 # 🔥 Features
-- **Atomics** - synchronization  primitive that is implemented in several forms: `Generic`, `Int` and `Bool`.
+- **Atomics** - synchronization primitive that is implemented in several forms: `Generic`, `Int` and `Bool`.
   - `Fast`. Under the hood a mutex (`pthread_mutex_lock`) that is more efficient than `OSSpinLock` and faster than `NSLock`.
   - `Throwable`. You can safely throw `Errors` and be able to delegate the handling.
 - **Locks** - contains a number of locks, such as:
   - `UnfairLock` - A lock which causes a thread trying to acquire it to simply wait in a loop ("spin") while repeatedly checking if the lock is available.
   - `ReadWriteLock` - An `RW` lock allows concurrent access for read-only operations, while write operations require exclusive access.
   - `Mutex` - Allows only one thread to be active in a given region of code.
-- **DispatchQueue+Extensions** - extended `DispatchQueue`, where `asyncAfter` and `once` methods can be performed. 
+- **DispatchQueue+Extensions** - extended `DispatchQueue`, where `asyncAfter` and `once` methods add convenience.
 - **Task** - A unit of work that performs a specific job and usually runs concurrently with other tasks.
-  - Tasks can be `grouped` - meaning that you are able to compose the tasks, similar to `Futures & Promises` and execute then serially.
-  - Tasks can be `sequenced` - meaning that you are able to compose different `groups` and execute then concurrently. No need to repeatedly use `DispatchGroup` (`enter`/`leave`). 
+  - Tasks can be `grouped` - meaning that you are able to compose the tasks, similar to `Futures & Promises` and execute them serially.
+  - Tasks can be `sequenced` - meaning that you are able to compose different `groups` and execute them concurrently. No need to repeatedly use `DispatchGroup` (`enter`/`leave`). 
 - **Thoroughly** tested.
 
 # 📚 Examples
 
 ## Task
-In order to create a `Task`, you need to simply use the `Task` struct and the `trailing closure` sytax:
+In order to create a `Task`, you need to simply use the `Task` struct and the `trailing closure` syntax:
 
 ```swift
 let uploadingTask = Task { controller in
@@ -62,7 +62,7 @@ uploadingTask.perform { outcome in
 }
 ```
 
-You can group the tasks, so the concurrent operations will be performed sequentially, one after another. Then you can chain a completion closure to handle the outcome:
+You can group the tasks, so the concurrent operations will be performed sequentially, one after another. Then, you can chain a completion closure to handle the outcome:
 
 ```swift
 let filesToUpload = [file, photo, video, xml]
@@ -73,7 +73,7 @@ group.perform { outcome in
 }
 ```
 
-Or you can concurrently perform a collection of tasks. They will be executed asyncronously, in parallel, if possible, or concurrently:
+Or you can concurrently perform a collection of tasks. They will be executed asynchronously, in parallel (if possible) or concurrently, that is up to the `GCD`:
 
 ```swift
 let filesToUpload = [file, photo, video, xml]
@@ -85,7 +85,7 @@ group.perform { outcome in
 ```
 
 ## Atomics
-Concurrency safe mutation of a property in multiple async dispatch queues. Simply wrap a property in `Atomic` type:
+Guarantees safe mutation of a property in multiple async dispatch queues. Simply wrap a property in `Atomic` type:
 
 ```swift
 let atomic = Atomic(0)
@@ -104,7 +104,7 @@ You can also use slightly more performance-friendly `AtomicInt` and `AtomicBool`
 ## Locks
 
 ### Read Write Lock
-A synchronization primitive that solves one of the readers–writers problems:
+A syncronozation primitive that solves one of the readers–writers problems:
 
 ```swift
 let rwLock = ReadWriteLock()
@@ -125,7 +125,7 @@ rwLock.unlock()
 ```
 
 ### Unfair Lock
-A lock which causes a thread trying to acquire it to simply wait in a loop ("spin") while repeatedly checking if the lock is available:
+A lock which causes a thread trying to acquire it to simply wait in a loop ("spin"), while repeatedly checking if the lock is available:
 
 ```swift
 let unfairLock = UnfairLock()
@@ -165,7 +165,6 @@ concurrentQueue.async {
   }
 }
 ```
-
 
 # 👨‍💻 Author 
 [Astemir Eleev](https://github.com/jVirus)
