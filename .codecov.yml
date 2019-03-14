@@ -2,4 +2,4 @@ codecov:
 strict_yaml_branch: master
 
 ignore:
-- "concurrency-kit-tests/.*"
+- "concurrency-kitTests/.*"
