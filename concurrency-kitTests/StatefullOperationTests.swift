@@ -20,11 +20,11 @@ class StatefullOperationTests: XCTestCase {
     }
 
     func testOperation() {
-        class MockStatefullOperation: StatefullOperation {
+        class MockStatefullOperation: StatefulOperation {
         
-            private var callback: (StatefullOperation) -> Void
+            private var callback: (StatefulOperation) -> Void
             
-            init(callback: @escaping (StatefullOperation) -> Void) {
+            init(callback: @escaping (StatefulOperation) -> Void) {
                 self.callback = callback
             }
             
@@ -54,11 +54,11 @@ class StatefullOperationTests: XCTestCase {
     }
     
     func testInterruptedOperation() {
-        class MockStatefullOperation: StatefullOperation {
+        class MockStatefullOperation: StatefulOperation {
             
-            private var callback: (StatefullOperation) -> Void
+            private var callback: (StatefulOperation) -> Void
             
-            init(callback: @escaping (StatefullOperation) -> Void) {
+            init(callback: @escaping (StatefulOperation) -> Void) {
                 self.callback = callback
             }
             

@@ -1,5 +1,5 @@
 //
-//  StatefullOperation.swift
+//  StatefulOperation.swift
 //  concurrency-kit
 //
 //  Created by Astemir Eleev on 14/03/2019.
@@ -15,7 +15,7 @@ import Foundation
 /// - `finished` - an operation has successfully finished the work
 ///
 /// In order to use the class, you need to subclass it and override the `executableSection` method, where the work need to be done. When the work is done, you need to call the `finish` or `finishIfNotCancelled` methods in order to properly change the internal state of an operation.
-open class StatefullOperation: Operation {
+open class StatefulOperation: Operation {
     
     // MARK: - Enum types
     
