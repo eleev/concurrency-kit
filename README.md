@@ -2,7 +2,7 @@
 
 [![Platforms](https://img.shields.io/badge/platforms-iOS-yellow.svg)]()
 [![Language](https://img.shields.io/badge/language-Swift-orange.svg)]()
-[![CocoaPod](https://img.shields.io/badge/pod-1.0.0-lightblue.svg)]()
+[![CocoaPod](https://img.shields.io/badge/pod-1.1.0-lightblue.svg)]()
 [![Build Status](https://travis-ci.org/jVirus/concurrency-kit.svg?branch=master)](https://travis-ci.org/jVirus/concurrency-kit)
 [![Coverage](https://codecov.io/gh/jVirus/concurrency-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/jVirus/concurrency-kit)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
@@ -21,7 +21,7 @@
 `concurrency-kit` is available via `CocoaPods`
 
 ```
-pod 'concurrency-kit', '~> 1.0.0' 
+pod 'concurrency-kit', '~> 1.1.0' 
 ```
 ## Manual
 You can always use `copy-paste` the sources method 😄. Or you can compile the framework and include it with your project.
@@ -38,6 +38,7 @@ You can always use `copy-paste` the sources method 😄. Or you can compile the 
 - **Task** - A unit of work that performs a specific job and usually runs concurrently with other tasks.
   - Tasks can be `grouped` - meaning that you are able to compose the tasks, similar to `Futures & Promises` and execute them serially.
   - Tasks can be `sequenced` - meaning that you are able to compose different `groups` and execute them concurrently. No need to repeatedly use `DispatchGroup` (`enter`/`leave`). 
+- **Stateful Operation** - is a custom `Operation` class that supports modern, `Swifty` state management through the usage of `Atomics` and `Enum` types.
 - **Thoroughly** tested.
 
 # 📚 Examples
@@ -82,6 +83,50 @@ let group = Task.sequence(filesToUpload)
 group.perform { outcome in 
   handle(outcome)
 }
+```
+
+## Stateful Operation
+Operation that has more 'Swifty' state management system, where state is an enum type with a number of possible cases. In order to demostrate the typical usage, let's define a new custom operation for network request:
+
+```swift
+class NetworkStatefulOperation: StatefullOperation {
+
+  // MARK: - Properties
+  
+  private let callback: (StatefullOperation?) -> Void
+  private let service: NetworkService             
+  private let dataHandler: Parsable            
+            
+  // MARK: - Initializers
+  
+  init(_ service: NetworkService, _ dataHandler: Parser, callback: @escaping (StatefullOperation?) -> Void) {
+    self.service = service
+    self.dataHandler = dataHandler
+    self.callback = callback
+  }
+  
+  // MARK: - Overrides
+  
+  override func executableSection() {
+    service.dataTask { [weak self] result in 
+      self?.dataHandler.parse(result)
+      self?.finishIfNotCancelled()
+      self?.callback(self)
+    }
+  }
+}
+```
+
+Then, the usage of the `NetworkStatefulOperation` class is quite straightforward:
+
+```swift
+// 1. Create an instance of `NetworkStatefulOperation` class:
+let networkiOperation = NetworkStatefulOperation(service, parser) {
+  // 3. As soon as the operation is finished, this closure will be executed with the operation state that can futher be handled to properly update the UI:
+  updateUI(with: $0.state)
+}
+// 2. Then call the `start` method:
+networkOperation.start()
 ```
 
 ## Atomics
@@ -151,7 +196,7 @@ There is a convenience method that removes the need to pass `.now() + time` in o
 
 ```swift
 DispatchQueue.main.asyncAfter(seconds: 2.5) {
-       expectation.fulfill()
+  expectation.fulfill()
 }
 ```
 
