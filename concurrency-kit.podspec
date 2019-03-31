@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "concurrency-kit"
-s.version      = "1.1.0"
+s.version      = "1.1.1"
 s.summary      = "🚄 Concurrency abstractions framework for iOS development [Task, Atomic, Lock, Operation, etc.]."
 
 # This description is used to generate tags and improve search results.
@@ -138,8 +138,8 @@ s.source_files = "concurrency-kit/**/*.swift"
 # s.dependency "JSONKit", "~> 1.4"
 
 s.requires_arc = true
-s.pod_target_xcconfig  = { 'SWIFT_VERSION' => '4.2' }
-s.swift_version = "4.2"
+s.pod_target_xcconfig  = { 'SWIFT_VERSION' => '5.0' }
+s.swift_version = "5.0"
 
 end
 
