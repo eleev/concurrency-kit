@@ -45,7 +45,7 @@ public extension Task {
     
     // MARK: - Controller struct
     
-    public struct Controller {
+    struct Controller {
         
         // MARK: - Priperties
         
@@ -69,7 +69,7 @@ public extension Task {
 
     // MARK: - Enum type
     
-    public enum Outcome: Equatable {
+    enum Outcome: Equatable {
        
         // MARK: - Cases
         
