@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode10.1
+osx_image: xcode10.2
 
 script:
 - set -o pipefail && xcodebuild test -project concurrency-kit.xcodeproj -scheme concurrency-kit -sdk iphonesimulator12.1 ONLY_ACTIVE_ARCH=NO | xcpretty
