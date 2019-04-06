@@ -7,7 +7,7 @@
 [![Coverage](https://codecov.io/gh/jVirus/concurrency-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/jVirus/concurrency-kit)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-**Last Update: 31/March/2019.**
+**Last Update: 06/April/2019.**
 
 ![](logo-concurrency_kit.png)
 
