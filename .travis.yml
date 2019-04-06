@@ -2,9 +2,9 @@ language: objective-c
 osx_image: xcode10.2
 
 script:
-- set -o pipefail && xcodebuild test -project concurrency-kit.xcodeproj -scheme concurrency-kit -sdk iphonesimulator12.1 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -project concurrency-kit.xcodeproj -scheme concurrency-kit -sdk iphonesimulator12.2 ONLY_ACTIVE_ARCH=NO | xcpretty
 
-- xcodebuild -scheme concurrency-kit -project concurrency-kit.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone XS,OS=12.1' build test
+- xcodebuild -scheme concurrency-kit -project concurrency-kit.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone XS,OS=12.2' build test
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
