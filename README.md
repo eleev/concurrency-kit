@@ -4,7 +4,6 @@
 [![Coverage](https://codecov.io/gh/jVirus/concurrency-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/jVirus/concurrency-kit)
 [![Platforms](https://img.shields.io/badge/Platforms-iOS-iPadOS-WatchOS-macOS-yellow.svg)]()
 [![Language](https://img.shields.io/badge/Language-Swift_5.1-orange.svg)]()
-[![CocoaPod](https://img.shields.io/badge/pod-1.1.1-lightblue.svg)]()
 [![SPM](https://img.shields.io/badge/SPM-Supported-red.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
